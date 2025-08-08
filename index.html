@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall by tovo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-light dark:bg-dark text-dark dark:text-light">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-dark/80 backdrop-blur-md shadow-sm py-4 px-4 lg:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div  class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-xl mr-3">tovo </div>
+                <span class="text-xl font-bold">wall's</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#nature" class="nav-link font-medium hover:text-indigo-500 transition">Nature</a>
+                <a href="#abstract" class="nav-link font-medium hover:text-indigo-500 transition">Abstract</a>
+                <a href="#minimalist" class="nav-link font-medium hover:text-indigo-500 transition">Minimalist</a>
+                <a href="#dark-mode" class="nav-link font-medium hover:text-indigo-500 transition">Dark Mode</a>
+                <a href="#anime" class="nav-link font-medium hover:text-indigo-500 transition">Anime</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button class="theme-toggle-btn hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-indigo-500 hover:text-white transition">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                
+                <button id="mobile-menu-button" class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white dark:bg-gray-800 mt-2 rounded-lg shadow-lg">
+            <div class="flex flex-col py-4">
+                <a href="#nature" class="nav-link px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Nature</a>
+                <a href="#abstract" class="nav-link px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Abstract</a>
+                <a href="#minimalist" class="nav-link px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Minimalist</a>
+                <a href="#dark-mode" class="nav-link px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Dark Mode</a>
+                <a href="#anime" class="nav-link px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Anime</a>
+                <div class="px-4 py-2">
+                    <button class="theme-toggle-btn w-full flex items-center justify-center py-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                        <span class="mr-2">Toggle Theme</span>
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Theme Toggle Floating Button -->
+    <div class="theme-toggle md:hidden">
+        <i class="fas fa-moon dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:block"></i>
+    </div>
+    
+    <!-- Nature Section -->
+    <section id="nature" class="section">
+        <div class="section-bg" style="background-image: url('')"> <img src="nature-wall-bg.jpg" alt=""></div>
+        <div class="section-overlay"></div>
+        
+        <h1 class="section-title">Nature Escapes</h1>
+        
+        <div class="wallpapers-grid">
+            <div class="wallpaper-card">
+                <img src="nature wall 01.jpg" alt="Forest" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Misty field</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="nature wall 02.jpg" alt="Mountain" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Wonder leaf</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="nature wall 03.jpg" alt="Lake" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Mountain view</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+
+            <div class="wallpaper-card">
+                <img src="nature wall 04.jpg" alt="Lake" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Mountain Bridge</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- Abstract Section -->
+    <section id="abstract" class="section">
+        <div class="section-bg" style="background-image: url('')"> <img src="abstract wall bg.jpg" alt=""></div>
+        <div class="section-overlay"></div>
+        
+        <h1 class="section-title">Abstract Art</h1>
+        
+        <div class="wallpapers-grid">
+            <div class="wallpaper-card">
+                <img src="Abstract Art 01.jpg" alt="Abstract 1" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white"> Leaf effect  </h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="Abstract Art 02.jpg" alt="Abstract 2" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Dark and light</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="Abstract Art 03.jpg" alt="Abstract 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">colour Effect</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+
+            <div class="wallpaper-card">
+                <img src="Abstract Art 04.jpg" alt="Abstract 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">colour pattarn</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Minimalist Section -->
+    <section id="minimalist" class="section">
+        <div class="section-bg" style="background-image: url('')"> <img src="minimal wall bg.jpg" alt=""> </div>
+        <div class="section-overlay"></div>
+        
+        <h1 class="section-title">Minimalist</h1>
+        
+        <div class="wallpapers-grid">
+            <div class="wallpaper-card">
+                <img src="minimal wall 01.jpg" alt="Minimal 1" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Balcony Lines</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="minimal wall 02.jpg" alt="Minimal 2" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Blur Silence</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="minimal wall 03.jpg" alt="Minimal 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Mountain Silhouette</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+
+             <div class="wallpaper-card">
+                <img src="minimal wall 04.jpg" alt="Minimal 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Minimal setup </h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dark Mode Section -->
+    <section id="dark-mode" class="section">
+        <div class="section-bg" style="background-image: url('')"> <img src="Dark wall bg.jpg" alt=""> </div>
+        <div class="section-overlay"></div>
+        
+        <h1 class="section-title">Dark Mode</h1>
+        
+        <div class="wallpapers-grid">
+            <div class="wallpaper-card">
+                <img src="dark wall 01.jpg" alt="Dark 1" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Tree Night</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="dark wakk 02.jpg" alt="Dark 2" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">House Galaxy</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="dark wall 03.jpg" alt="Dark 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Old city side </h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+
+            <div class="wallpaper-card">
+                <img src="dark wall 04.jpg" alt="Dark 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">star Dream</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Anime Section -->
+    <section id="anime" class="section">
+        <div class="section-bg" style="background-image: url('')"> <img src="anime wall bg.jpg" alt=""> </div>
+        <div class="section-overlay"></div>
+        
+        <h1 class="section-title">Anime Worlds</h1>
+        
+        <div class="wallpapers-grid">
+            <div class="wallpaper-card">
+                <img src="anime wall 01.jpg" alt="Anime 1" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Cyber City</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="anime wall 02.jpg" alt="Anime 2" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">japan street</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+            
+            <div class="wallpaper-card">
+                <img src="anime wall 03.jpg" alt="Anime 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">cherry Blow</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+
+            <div class="wallpaper-card">
+                <img src="anime wall 04.jpg" alt="Anime 3" class="wallpaper-img">
+                <div class="wallpaper-overlay">
+                    <h3 class="text-xl font-bold text-white">Road side</h3>
+                    <p class="text-gray-200">3840x2160</p>
+                </div>
+                <div class="download-btn">
+                    <i class="fas fa-download"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="pr.js"> 
+    </script>
+</body>
+</html>
